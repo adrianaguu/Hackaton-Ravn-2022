@@ -59,19 +59,8 @@ struct ModuleDetails: View {
             .showLoader(isLoading: viewModel.isLoadingWeeks)
             
         case .evaluation:
-            ScrollView {
-                LazyVStack(alignment: .leading, spacing: 16) {
-                    ForEach(viewModel.feedbacks) { feedback in
-                        NerderyRow(title: feedback.content) {
-                            ChipLabel(title: feedback.type)
-                                .foregroundColor(Color(feedback.type == "Good" ? .systemGreen : .systemRed))
-                        }
-                    }
-                }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 24)
+            FeedbackList(items: viewModel.feedbacks)
                 .showLoader(isLoading: viewModel.isLoadingFeedbacks)
-            }
         }
     }
 }

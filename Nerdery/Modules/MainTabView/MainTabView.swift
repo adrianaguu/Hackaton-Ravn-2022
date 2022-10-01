@@ -22,7 +22,7 @@ struct MainTabView: View {
                     Label("Modules", systemImage: "tray.and.arrow.down.fill")
                 }
 
-            SearchView()
+            SearchView(viewModel: SearchViewModel(userId: authentication.userId))
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }

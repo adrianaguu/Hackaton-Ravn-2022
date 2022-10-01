@@ -13,7 +13,7 @@ enum FeedbackFilter: String {
 }
 
 protocol FeedbackServiceType {
-    func getFeedbacks(userId: String, filter: FeedbackFilter) -> AnyPublisher<[Feedback], Error>
+    func getFeedbacks(userId: String, filter: FeedbackFilter?) -> AnyPublisher<[Feedback], Error>
 }
 
 struct FeedbackService: FeedbackServiceType {
@@ -25,9 +25,9 @@ struct FeedbackService: FeedbackServiceType {
         self.decoder = decoder
     }
     
-    func getFeedbacks(userId: String, filter: FeedbackFilter) -> AnyPublisher<[Feedback], Error> {
+    func getFeedbacks(userId: String, filter: FeedbackFilter? = nil) -> AnyPublisher<[Feedback], Error> {
         session.request(
-            urlString: ConfigService.baseURL + "feedbacks/\(userId)/filterAll",
+            urlString: ConfigService.baseURL + "users/\(userId)/feedbacks/filterAll",
             requestType: .get
         )
         .decode(type: [Feedback].self, decoder: decoder)

@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct SearchView: View {
+    @StateObject var viewModel: SearchViewModel
+    
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack {
-                    Text("Search")
-                }
+            VStack {
+                FeedbackList(items: viewModel.searchResults)
+                    .showLoader(isLoading: viewModel.isLoading)
+
             }
+            .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("Search title")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -23,6 +26,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(viewModel: .init(userId: "1"))
     }
 }
