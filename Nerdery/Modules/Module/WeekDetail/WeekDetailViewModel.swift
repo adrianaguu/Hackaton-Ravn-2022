@@ -11,7 +11,7 @@ import Combine
 final class WeekDetailViewModel: ObservableObject {
     @Published var displayedDetail: WeekDetailType
     @Published var topics: [Theme] = [.example, .example1, .example2]
-    @Published var challenge: Challenge?
+    @Published var assignments: [Assignment] = [.example, .example1, .example2]
     @Published var feedbacks: [Feedback] = [.example, .example1]
     @Published var isLoadingTopics = false
     @Published var isLoadingChallenge = false
@@ -63,8 +63,8 @@ final class WeekDetailViewModel: ObservableObject {
                     // TODO: Show alert message
                     self?.isLoadingChallenge = false
                 }
-            } receiveValue: { [weak self] challenge in
-                self?.challenge = challenge
+            } receiveValue: { [weak self] assignments in
+                self?.assignments = assignments
             }
             .store(in: &cancellables)
             
