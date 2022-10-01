@@ -42,6 +42,7 @@
 		B17D79F928E82CE200C7915C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F528E82CE200C7915C /* UserService.swift */; };
 		B17D79FA28E82CE200C7915C /* ModuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F628E82CE200C7915C /* ModuleService.swift */; };
 		B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F728E82CE200C7915C /* FeedbackService.swift */; };
+		B17D79FD28E82DB900C7915C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FC28E82DB900C7915C /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		B17D79F528E82CE200C7915C /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B17D79F628E82CE200C7915C /* ModuleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleService.swift; sourceTree = "<group>"; };
 		B17D79F728E82CE200C7915C /* FeedbackService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
+		B17D79FC28E82DB900C7915C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */,
+				B17D79FC28E82DB900C7915C /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				B17D79F128E82C5800C7915C /* Theme.swift in Sources */,
 				B17D79EA28E82C5800C7915C /* Comment.swift in Sources */,
 				A4009D5328E7FB3E00E5FFEE /* SearchViewModel.swift in Sources */,
+				B17D79FD28E82DB900C7915C /* View+Extension.swift in Sources */,
 				A4009D6128E8121F00E5FFEE /* ModuleDetailType.swift in Sources */,
 				A4009D4128E7F60100E5FFEE /* Profile.swift in Sources */,
 				B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */,
