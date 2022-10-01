@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var authentication: AuthenticationViewModel
+    
     var body: some View {
         TabView {
-            Profile(viewModel: ProfileViewModel(userId: ""))
+            Profile(viewModel: ProfileViewModel(userId: authentication.userId))
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle.fill")
                 }
@@ -19,7 +21,7 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Modules", systemImage: "tray.and.arrow.down.fill")
                 }
-                          
+
             SearchView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
