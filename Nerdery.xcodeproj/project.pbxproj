@@ -52,6 +52,7 @@
 		B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F728E82CE200C7915C /* FeedbackService.swift */; };
 		B17D79FD28E82DB900C7915C /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */; };
 		B17D7A0028E8324200C7915C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */; };
+		B17D7A0328E8882200C7915C /* NerderyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D7A0228E8882200C7915C /* NerderyRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		B17D79F728E82CE200C7915C /* FeedbackService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
 		B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		B17D7A0228E8882200C7915C /* NerderyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerderyRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		A4009D2E28E7F25600E5FFEE /* Nerdery */ = {
 			isa = PBXGroup;
 			children = (
+				B17D7A0128E8879D00C7915C /* Components */,
 				A4009D8628E86FC500E5FFEE /* ViewModifiers */,
 				A4009D6B28E859D800E5FFEE /* Resources */,
 				B17D79DA28E82BA800C7915C /* Extensions */,
@@ -358,6 +361,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		B17D7A0128E8879D00C7915C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B17D7A0228E8882200C7915C /* NerderyRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -462,6 +473,7 @@
 				B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */,
 				A4009D8128E8686900E5FFEE /* Gradient+Extensions.swift in Sources */,
 				B17D79EB28E82C5800C7915C /* Challenge.swift in Sources */,
+				B17D7A0328E8882200C7915C /* NerderyRow.swift in Sources */,
 				A4009D6528E814A900E5FFEE /* WeekDetailType.swift in Sources */,
 				B17D79ED28E82C5800C7915C /* Week.swift in Sources */,
 				A4009D3028E7F25600E5FFEE /* NerderyApp.swift in Sources */,
