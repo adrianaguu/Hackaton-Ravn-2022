@@ -11,7 +11,9 @@ import SwiftUI
 struct NerderyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                LoginView()
+            }
         }
     }
 }
