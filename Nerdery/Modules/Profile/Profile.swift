@@ -11,15 +11,28 @@ struct Profile: View {
     @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
-        NavigationView {
             VStack {
-                Text("Profile")
-                Spacer()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(viewModel.user.name)
+                            .font(.title)
+                            .fontWeight(.medium)
+                        
+                        Text(viewModel.user.technology)
+                    }
+                    
+                    Spacer()
+                    
+                    Image("MockUser")
+                }
+                .padding(.horizontal, 16)
+
+                ProgressOverview(progress: 50, score: "10")
             }
+            .padding()
             .showLoader(isLoading: viewModel.isLoading)
-            .navigationTitle("Profile")
+            .navigationTitle("The Nerdery")
             .navigationBarTitleDisplayMode(.inline)
-        }
     }
 }
 

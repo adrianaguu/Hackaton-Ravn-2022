@@ -17,8 +17,10 @@ extension Color {
     static let lightYellow = Color("LightYellow")
     
     static let colorful04 = Color("Colorful04")
+    static let grayDark02 = Color("GrayDark02")
     
     //MARK: Primary Color
+    static let ellipse1 = Color("Ellipse1")
     static let ellipse4 = Color("Ellipse4")
     
     //MARK: Background
