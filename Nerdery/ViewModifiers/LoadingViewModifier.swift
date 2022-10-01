@@ -1,5 +1,5 @@
 //
-//  View+Extension.swift
+//  LoadingViewModifier.swift
 //  Nerdery
 //
 //  Created by Ruben Torres on 10/1/22.
@@ -23,6 +23,6 @@ struct LoadingViewModifier: ViewModifier {
 
 extension View {
     func showLoader(isLoading: Bool) -> some View {
-        self.modifier(LoadingViewModifier(isLoading: isLoading))
+        modifier(LoadingViewModifier(isLoading: isLoading))
     }
 }

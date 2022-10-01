@@ -11,4 +11,5 @@ extension Image {
     static let avatar1 = Image("Avatar1")
     static let avatar2 = Image("Avatar2")
     static let avatar3 = Image("Avatar3")
+    static let googleIcon = Image("GoogleIcon")
 }

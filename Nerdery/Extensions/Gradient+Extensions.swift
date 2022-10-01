@@ -8,5 +8,6 @@
 import SwiftUI
 
 extension Gradient {
-    static let lightGreenToLightPink = Gradient(colors: [.lightGreen, .lightBlue, .lightPurple, .lightPink])
+    static let gradient01 = Gradient(colors: [.lightGreen, .lightBlue, .lightPurple, .lightPink])
+    static let gradient03 = Gradient(colors: [.lightOrange, .lightYellow])
 }

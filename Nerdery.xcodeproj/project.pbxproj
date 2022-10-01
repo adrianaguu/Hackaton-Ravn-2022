@@ -27,13 +27,14 @@
 		A4009D6528E814A900E5FFEE /* WeekDetailType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D6428E814A900E5FFEE /* WeekDetailType.swift */; };
 		A4009D6828E8195700E5FFEE /* ThemeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D6728E8195700E5FFEE /* ThemeDetailViewModel.swift */; };
 		A4009D6A28E8199C00E5FFEE /* ThemeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D6928E8199C00E5FFEE /* ThemeDetail.swift */; };
-		A4009D7728E85C6000E5FFEE /* GradientBackgroudImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D7628E85C6000E5FFEE /* GradientBackgroudImage.swift */; };
 		A4009D7928E85CC800E5FFEE /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D7828E85CC800E5FFEE /* Color+Extensions.swift */; };
 		A4009D7B28E85D4700E5FFEE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4009D7A28E85D4700E5FFEE /* Colors.xcassets */; };
 		A4009D7D28E85D8300E5FFEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4009D7C28E85D8300E5FFEE /* Images.xcassets */; };
 		A4009D7F28E861D600E5FFEE /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D7E28E861D600E5FFEE /* Image+Extensions.swift */; };
 		A4009D8128E8686900E5FFEE /* Gradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D8028E8686900E5FFEE /* Gradient+Extensions.swift */; };
 		A4009D8328E8695000E5FFEE /* CheckDialogRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D8228E8695000E5FFEE /* CheckDialogRectangle.swift */; };
+		A4009D8528E86F4300E5FFEE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D8428E86F4300E5FFEE /* AvatarView.swift */; };
+		A4009D8A28E8703700E5FFEE /* GradiantCircularBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D8928E8703700E5FFEE /* GradiantCircularBackground.swift */; };
 		B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */; };
 		B17D79E928E82C5800C7915C /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DF28E82C5800C7915C /* Assignment.swift */; };
 		B17D79EA28E82C5800C7915C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E028E82C5800C7915C /* Comment.swift */; };
@@ -49,7 +50,7 @@
 		B17D79F928E82CE200C7915C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F528E82CE200C7915C /* UserService.swift */; };
 		B17D79FA28E82CE200C7915C /* ModuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F628E82CE200C7915C /* ModuleService.swift */; };
 		B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F728E82CE200C7915C /* FeedbackService.swift */; };
-		B17D79FD28E82DB900C7915C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FC28E82DB900C7915C /* View+Extension.swift */; };
+		B17D79FD28E82DB900C7915C /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */; };
 		B17D7A0028E8324200C7915C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,13 +76,14 @@
 		A4009D6428E814A900E5FFEE /* WeekDetailType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDetailType.swift; sourceTree = "<group>"; };
 		A4009D6728E8195700E5FFEE /* ThemeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDetailViewModel.swift; sourceTree = "<group>"; };
 		A4009D6928E8199C00E5FFEE /* ThemeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDetail.swift; sourceTree = "<group>"; };
-		A4009D7628E85C6000E5FFEE /* GradientBackgroudImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroudImage.swift; sourceTree = "<group>"; };
 		A4009D7828E85CC800E5FFEE /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		A4009D7A28E85D4700E5FFEE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A4009D7C28E85D8300E5FFEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4009D7E28E861D600E5FFEE /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		A4009D8028E8686900E5FFEE /* Gradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient+Extensions.swift"; sourceTree = "<group>"; };
 		A4009D8228E8695000E5FFEE /* CheckDialogRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDialogRectangle.swift; sourceTree = "<group>"; };
+		A4009D8428E86F4300E5FFEE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		A4009D8928E8703700E5FFEE /* GradiantCircularBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradiantCircularBackground.swift; sourceTree = "<group>"; };
 		B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		B17D79DF28E82C5800C7915C /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		B17D79E028E82C5800C7915C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -97,7 +99,7 @@
 		B17D79F528E82CE200C7915C /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B17D79F628E82CE200C7915C /* ModuleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleService.swift; sourceTree = "<group>"; };
 		B17D79F728E82CE200C7915C /* FeedbackService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
-		B17D79FC28E82DB900C7915C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 		A4009D2E28E7F25600E5FFEE /* Nerdery */ = {
 			isa = PBXGroup;
 			children = (
+				A4009D8628E86FC500E5FFEE /* ViewModifiers */,
 				A4009D6B28E859D800E5FFEE /* Resources */,
 				B17D79DA28E82BA800C7915C /* Extensions */,
 				A4009D2F28E7F25600E5FFEE /* NerderyApp.swift */,
@@ -204,7 +207,7 @@
 		A4009D4828E7F87500E5FFEE /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A4009D7528E85C4500E5FFEE /* Helper */,
+				A4009D7528E85C4500E5FFEE /* HelperViews */,
 				A4009D4A28E7F8DB00E5FFEE /* LoginView.swift */,
 				A4009D4C28E7F96500E5FFEE /* LoginViewModel.swift */,
 			);
@@ -290,20 +293,28 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A4009D7528E85C4500E5FFEE /* Helper */ = {
+		A4009D7528E85C4500E5FFEE /* HelperViews */ = {
 			isa = PBXGroup;
 			children = (
-				A4009D7628E85C6000E5FFEE /* GradientBackgroudImage.swift */,
 				A4009D8228E8695000E5FFEE /* CheckDialogRectangle.swift */,
+				A4009D8428E86F4300E5FFEE /* AvatarView.swift */,
 			);
-			path = Helper;
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		A4009D8628E86FC500E5FFEE /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */,
+				A4009D8928E8703700E5FFEE /* GradiantCircularBackground.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		B17D79DA28E82BA800C7915C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */,
-				B17D79FC28E82DB900C7915C /* View+Extension.swift */,
 				A4009D7828E85CC800E5FFEE /* Color+Extensions.swift */,
 				A4009D7E28E861D600E5FFEE /* Image+Extensions.swift */,
 				A4009D8028E8686900E5FFEE /* Gradient+Extensions.swift */,
@@ -431,6 +442,7 @@
 				A4009D5128E7FB2E00E5FFEE /* ProfileViewModel.swift in Sources */,
 				B17D79F828E82CE200C7915C /* ConfigService.swift in Sources */,
 				A4009D3228E7F25600E5FFEE /* MainTabView.swift in Sources */,
+				A4009D8528E86F4300E5FFEE /* AvatarView.swift in Sources */,
 				A4009D4328E7F64F00E5FFEE /* ModuleList.swift in Sources */,
 				B17D79E928E82C5800C7915C /* Assignment.swift in Sources */,
 				B17D79F928E82CE200C7915C /* UserService.swift in Sources */,
@@ -441,13 +453,12 @@
 				B17D79F128E82C5800C7915C /* Theme.swift in Sources */,
 				B17D79EA28E82C5800C7915C /* Comment.swift in Sources */,
 				A4009D5328E7FB3E00E5FFEE /* SearchViewModel.swift in Sources */,
-				B17D79FD28E82DB900C7915C /* View+Extension.swift in Sources */,
+				B17D79FD28E82DB900C7915C /* LoadingViewModifier.swift in Sources */,
 				A4009D7F28E861D600E5FFEE /* Image+Extensions.swift in Sources */,
 				A4009D8328E8695000E5FFEE /* CheckDialogRectangle.swift in Sources */,
 				A4009D6128E8121F00E5FFEE /* ModuleDetailType.swift in Sources */,
 				A4009D4128E7F60100E5FFEE /* Profile.swift in Sources */,
 				B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */,
-				A4009D7728E85C6000E5FFEE /* GradientBackgroudImage.swift in Sources */,
 				B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */,
 				A4009D8128E8686900E5FFEE /* Gradient+Extensions.swift in Sources */,
 				B17D79EB28E82C5800C7915C /* Challenge.swift in Sources */,
@@ -456,6 +467,7 @@
 				A4009D3028E7F25600E5FFEE /* NerderyApp.swift in Sources */,
 				A4009D4D28E7F96500E5FFEE /* LoginViewModel.swift in Sources */,
 				A4009D5C28E800D400E5FFEE /* WeekDetail.swift in Sources */,
+				A4009D8A28E8703700E5FFEE /* GradiantCircularBackground.swift in Sources */,
 				A4009D5E28E8011900E5FFEE /* ModuleDetailViewModel.swift in Sources */,
 				A4009D5728E8000900E5FFEE /* ModuleDetail.swift in Sources */,
 				B17D79EC28E82C5800C7915C /* User.swift in Sources */,

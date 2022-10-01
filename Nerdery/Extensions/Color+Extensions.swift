@@ -9,14 +9,21 @@ import SwiftUI
 
 extension Color {
     //MARK: General
-    static var lightGreen = Color("LightGreen")
-    static var lightPink = Color("LightPink")
-    static var lightPurple = Color("LightPurple")
-    static var lightBlue = Color("LightBlue")
+    static let lightGreen = Color("LightGreen")
+    static let lightPink = Color("LightPink")
+    static let lightPurple = Color("LightPurple")
+    static let lightBlue = Color("LightBlue")
+    static let lightOrange = Color("LightOrange")
+    static let lightYellow = Color("LightYellow")
+    
+    static let colorful04 = Color("Colorful04")
+    
+    //MARK: Primary Color
+    static let ellipse4 = Color("Ellipse4")
     
     //MARK: Background
-    static var background02 = Color("Background02")
+    static let background02 = Color("Background02")
     
     //MARK: State
-    static var deactive = Color("StateDeactive")
+    static let deactive = Color("StateDeactive")
 }
