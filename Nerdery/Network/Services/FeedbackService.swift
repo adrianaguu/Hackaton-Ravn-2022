@@ -27,7 +27,7 @@ struct FeedbackService: FeedbackServiceType {
     
     func getFeedbacks(userId: String, filter: FeedbackFilter) -> AnyPublisher<[Feedback], Error> {
         session.request(
-            urlString: ConfigService.baseURL + "feedbacks/\(userId)/?\(filter)",
+            urlString: ConfigService.baseURL + "feedbacks/\(userId)/filterAll",
             requestType: .get
         )
         .decode(type: [Feedback].self, decoder: decoder)

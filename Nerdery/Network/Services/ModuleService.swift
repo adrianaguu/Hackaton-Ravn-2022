@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol ModuleServiceType {
-    func getModules(userId: String, programId: String) -> AnyPublisher<[Module], Error>
+    func getModules(userId: String) -> AnyPublisher<[Module], Error>
     func getModuleFeedbacks(moduleId: String) -> AnyPublisher<[Feedback], Error>
     func getWeeks(moduleId: String) -> AnyPublisher<[Week], Error>
     func getThemes(moduleId: String, weekId: String) -> AnyPublisher<[Theme], Error>
@@ -27,9 +27,9 @@ struct ModuleService: ModuleServiceType {
     }
     
 
-    func getModules(userId: String, programId: String) -> AnyPublisher<[Module], Error> {
+    func getModules(userId: String) -> AnyPublisher<[Module], Error> {
         session.request(
-            urlString: ConfigService.baseURL + "programs/\(programId)/modules/\(userId)/",
+            urlString: ConfigService.baseURL + "users/\(userId)/modules",
             requestType: .get
         )
         .decode(type: [Module].self, decoder: decoder)

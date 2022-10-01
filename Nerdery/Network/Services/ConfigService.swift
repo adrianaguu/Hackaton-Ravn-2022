@@ -8,5 +8,5 @@
 import Foundation
 
 struct ConfigService {
-    static let baseURL: String = "aURLTEST"
+    static let baseURL: String = "https://api-deeiqh.herokuapp.com/"
 }
