@@ -16,7 +16,7 @@ struct ProgressLabel: View {
         ProgressView(value: progress, total: 100)
             .progressViewStyle(.linear)
             .tint(tintColor)
-            .background(.white)
+            .background(Color(uiColor: .systemGray))
             .scaleEffect(x: 1, y: 2, anchor: .center)
         
         HStack {
@@ -35,6 +35,6 @@ struct ProgressLabel: View {
 
 struct ProgressLabel_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressLabel(tintColor: .white, progress: 50, score: "10")
+        ProgressLabel(tintColor: .accentColor, progress: 50, score: "10")
     }
 }
