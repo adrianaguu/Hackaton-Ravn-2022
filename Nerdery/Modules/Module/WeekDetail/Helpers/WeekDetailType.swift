@@ -15,11 +15,11 @@ enum WeekDetailType: CaseIterable {
     var title: String {
         switch self {
         case .themeList:
-            return "Themes"
+            return "Topics"
         case .challenge:
             return "Challenge"
         case .evaluation:
-            return "Evaluation"
+            return "Feedbacks"
         }
     }
 }

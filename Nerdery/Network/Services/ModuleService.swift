@@ -13,7 +13,7 @@ protocol ModuleServiceType {
     func getModuleFeedbacks(moduleId: String) -> AnyPublisher<[Feedback], Error>
     func getWeeks(moduleId: String) -> AnyPublisher<[Week], Error>
     func getThemes(moduleId: String, weekId: String) -> AnyPublisher<[Theme], Error>
-    func getChallenge(moduleId: String, weekId: String) -> AnyPublisher<Challenge, Error>
+    func getChallenge(moduleId: String, weekId: String) -> AnyPublisher<[Assignment], Error>
     func getWeekFeedbacks(moduleId: String, weekId: String) -> AnyPublisher<[Feedback], Error>
 }
 
@@ -77,12 +77,12 @@ struct ModuleService: ModuleServiceType {
         .eraseToAnyPublisher()
     }
     
-    func getChallenge(moduleId: String, weekId: String) -> AnyPublisher<Challenge, Error> {
+    func getChallenge(moduleId: String, weekId: String) -> AnyPublisher<[Assignment], Error> {
         session.request(
-            urlString: ConfigService.baseURL + "modules/\(moduleId)/weeks/\(weekId)/challenge",
+            urlString: ConfigService.baseURL + "modules/\(moduleId)/weeks/\(weekId)/challenge/assignments",
             requestType: .get
         )
-        .decode(type: Challenge.self, decoder: decoder)
+        .decode(type: [Assignment].self, decoder: decoder)
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }

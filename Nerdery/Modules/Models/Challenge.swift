@@ -7,12 +7,14 @@
 
 import Foundation
 
-struct Challenge: Codable, Identifiable {
+struct Challenge: Identifiable {
     let id: String
     let assignments: [Assignment]
     let evaluationId: String
     let evaluation: Evaluation
-    
+}
+
+extension Challenge: Codable {
     enum CodingKeys: String, CodingKey {
         case uuid
         case assignments

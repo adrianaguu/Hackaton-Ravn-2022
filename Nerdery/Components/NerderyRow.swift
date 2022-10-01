@@ -40,15 +40,18 @@ struct NerderyRow<Content: View>: View {
     let state: NerderyRowState
     var additionalContent: Content
     let isNavigation: Bool
+    let showAdditionalContent: Bool
     
-    init(title: String, description: String? = nil, state: NerderyRowState = .idle, isNavigation: Bool = true, @ViewBuilder additionalContent: () -> Content ) {
+    init(title: String, description: String? = nil, state: NerderyRowState = .idle, showAdditionalContent: Bool = true, isNavigation: Bool = true, @ViewBuilder additionalContent: () -> Content ) {
         self.title = title
         self.description = description
         self.additionalContent = additionalContent()
         self.state = state
         self.isNavigation = isNavigation
+        self.showAdditionalContent = showAdditionalContent
     }
     
+    var addExtraPadding: Bool { description == nil && !showAdditionalContent }
     
     var body: some View {
         HStack {
@@ -58,7 +61,9 @@ struct NerderyRow<Content: View>: View {
                 if let description = description {
                     Text(description)
                 }
-                additionalContent
+                if showAdditionalContent {
+                    additionalContent
+                }
             }
             .font(.subheadline)
             Spacer()
@@ -69,7 +74,7 @@ struct NerderyRow<Content: View>: View {
             }
         }
         .foregroundColor(Color(uiColor: .darkText))
-        .padding(.vertical, 8)
+        .padding(.vertical, addExtraPadding ? 16 : 8)
         .padding(.horizontal, 16)
         .background(
             RoundedRectangle(cornerRadius: 8)

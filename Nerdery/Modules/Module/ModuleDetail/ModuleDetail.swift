@@ -40,7 +40,7 @@ struct ModuleDetails: View {
                             .fontWeight(.semibold)
                     }
                     ForEach(viewModel.weeks) { week in
-                        NavigationLink(destination: WeekDetail(viewModel: WeekDetailViewModel(moduleId: viewModel.moduleId, weekId: week.id))) {
+                        NavigationLink(destination: WeekDetail(viewModel: WeekDetailViewModel(moduleId: viewModel.moduleId, weekId: week.id, weekTitle: week.name, isCompleted: week.isCompleted))) {
                             NerderyRow(title: week.name) {
                                 if week.isCompleted {
                                     ChipLabel(title: "Done")
