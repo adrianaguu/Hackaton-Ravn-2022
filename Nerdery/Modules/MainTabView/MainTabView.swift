@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            Profile()
+            Profile(viewModel: ProfileViewModel(userId: ""))
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle.fill")
                 }

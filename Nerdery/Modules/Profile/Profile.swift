@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct Profile: View {
+    @StateObject var viewModel: ProfileViewModel
+    
     var body: some View {
-        Text("Profile")
+        VStack {
+            Text("Profile")
+        }
+        .showLoader(isLoading: viewModel.isLoading)
     }
 }
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile()
+        Profile(viewModel: ProfileViewModel(userId: "test"))
     }
 }
