@@ -11,28 +11,37 @@ struct Profile: View {
     @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
-            VStack {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(viewModel.user.name)
-                            .font(.title)
-                            .fontWeight(.medium)
-                        
-                        Text(viewModel.user.technology)
-                    }
+        VStack(alignment: .leading) {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(viewModel.user.name)
+                        .font(.title)
+                        .fontWeight(.medium)
                     
-                    Spacer()
-                    
-                    Image("MockUser")
+                    Text(viewModel.user.technology)
                 }
-                .padding(.horizontal, 16)
-
-                ProgressOverview(progress: 50, score: "10")
+                
+                Spacer()
+                
+                Image("MockUser")
             }
-            .padding()
-            .showLoader(isLoading: viewModel.isLoading)
-            .navigationTitle("The Nerdery")
-            .navigationBarTitleDisplayMode(.inline)
+            
+            ProgressOverview(progress: 50, score: "10")
+            
+            Text("Current Week")
+                .fontWeight(.medium)
+                .padding(.top, 24)
+            
+            NerderyRow(title: "Week 2", description: "Week topic name") {
+                VStack {
+                    ProgressLabel(tintColor: .grayDark02, progress: 40, score: "10")
+                }
+            }
+        }
+        .padding()
+        .showLoader(isLoading: viewModel.isLoading)
+        .navigationTitle("The Nerdery")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
