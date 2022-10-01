@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WeekDetail: View {
     @StateObject var viewModel: WeekDetailViewModel
+    @State private var presentedTheme: Theme?
     
     var body: some View {
         VStack {
@@ -41,6 +42,9 @@ struct WeekDetail: View {
         }
         .navigationTitle("Week title")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(item: $presentedTheme) { item in
+            EvaluationDetail(title: item.name, feedBacks: [.example, .example1], score: "10", mentorName: "Carlos Perez")
+        }
     }
     
     @ViewBuilder
@@ -50,7 +54,9 @@ struct WeekDetail: View {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     ForEach(viewModel.topics) { topic in
-                        NavigationLink(destination: ThemeDetail()) {
+                        Button {
+                            presentedTheme = topic
+                        } label: {
                             NerderyRow(title: topic.name, showAdditionalContent: false, additionalContent: { })
                         }
                     }
