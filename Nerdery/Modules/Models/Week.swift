@@ -12,21 +12,16 @@ struct Week: Codable, Identifiable {
     let moduleId: String
     let name: String
     let isCompleted: Bool
-    let themes: [Theme]
-    let feebacks: [Feedback]
     let challengeId: String
+}
 
-    let challenge: Challenge
-    
+extension Week {
     enum CodingKeys: String, CodingKey {
         case uuid
         case moduleId
         case name
         case isCompleted
-        case theme
-        case feeback
         case challengeId
-        case challenge
     }
 
     init(from decoder: Decoder) throws {
@@ -35,11 +30,7 @@ struct Week: Codable, Identifiable {
         self.moduleId = try container.decode(String.self, forKey: .moduleId)
         self.name = try container.decode(String.self, forKey: .name)
         self.isCompleted = try container.decode(Bool.self, forKey: .isCompleted)
-        self.themes = try container.decode([Theme].self, forKey: .theme)
-        self.feebacks = try container.decode([Feedback].self, forKey: .feeback)
-
         self.challengeId = try container.decode(String.self, forKey: .challengeId)
-        self.challenge = try container.decode(Challenge.self, forKey: .challenge)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -47,7 +38,10 @@ struct Week: Codable, Identifiable {
         try container.encode(self.id, forKey: .uuid)
         try container.encode(self.name, forKey: .name)
         try container.encode(self.isCompleted, forKey: .isCompleted)
-        try container.encode(self.themes, forKey: .theme)
-        try container.encode(self.feebacks, forKey: .feeback)
     }
+}
+
+extension Week {
+    static let example = Week(id: "id1", moduleId: "moduleId1", name: "Week 1", isCompleted: true, challengeId: "challengeId")
+    static let example1 = Week(id: "id2", moduleId: "moduleId2", name: "Week 2", isCompleted: false, challengeId: "challengeId")
 }

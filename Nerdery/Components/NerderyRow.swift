@@ -41,7 +41,7 @@ struct NerderyRow<Content: View>: View {
     var additionalContent: Content
     let isNavigation: Bool
     
-    init(title: String, description: String?, state: NerderyRowState = .idle, isNavigation: Bool = true, @ViewBuilder additionalContent: () -> Content ) {
+    init(title: String, description: String? = nil, state: NerderyRowState = .idle, isNavigation: Bool = true, @ViewBuilder additionalContent: () -> Content ) {
         self.title = title
         self.description = description
         self.additionalContent = additionalContent()
