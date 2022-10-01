@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var authentication: AuthenticationViewModel
+    
     var body: some View {
-        NavigationLink(destination: MainTabView()) {
+        Button {
+            authentication.updateValidation(success: true)
+        } label: {
             Text("Log In")
         }
     }

@@ -43,6 +43,7 @@
 		B17D79FA28E82CE200C7915C /* ModuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F628E82CE200C7915C /* ModuleService.swift */; };
 		B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79F728E82CE200C7915C /* FeedbackService.swift */; };
 		B17D79FD28E82DB900C7915C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FC28E82DB900C7915C /* View+Extension.swift */; };
+		B17D7A0028E8324200C7915C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		B17D79F628E82CE200C7915C /* ModuleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleService.swift; sourceTree = "<group>"; };
 		B17D79F728E82CE200C7915C /* FeedbackService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
 		B17D79FC28E82DB900C7915C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		A4009D4728E7F7BD00E5FFEE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B17D79FE28E8323400C7915C /* Authentication */,
 				B17D79DE28E82C5800C7915C /* Models */,
 				A4009D4928E7F89400E5FFEE /* MainTabView */,
 				A4009D4828E7F87500E5FFEE /* Login */,
@@ -299,6 +302,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B17D79FE28E8323400C7915C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,6 +396,7 @@
 				B17D79E928E82C5800C7915C /* Assignment.swift in Sources */,
 				B17D79F928E82CE200C7915C /* UserService.swift in Sources */,
 				B17D79EF28E82C5800C7915C /* Program.swift in Sources */,
+				B17D7A0028E8324200C7915C /* AuthenticationViewModel.swift in Sources */,
 				A4009D5A28E8009F00E5FFEE /* WeekDetailViewModel.swift in Sources */,
 				B17D79F128E82C5800C7915C /* Theme.swift in Sources */,
 				B17D79EA28E82C5800C7915C /* Comment.swift in Sources */,

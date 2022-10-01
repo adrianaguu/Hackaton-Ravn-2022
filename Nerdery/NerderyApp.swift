@@ -9,10 +9,16 @@ import SwiftUI
 
 @main
 struct NerderyApp: App {
+    @StateObject var authentication = AuthenticationViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            if authentication.isValidated {
+                MainTabView()
+                    .environmentObject(authentication)
+            } else {
                 LoginView()
+                    .environmentObject(authentication)
             }
         }
     }
