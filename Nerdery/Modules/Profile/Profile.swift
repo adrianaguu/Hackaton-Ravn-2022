@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Profile: View {
     @StateObject var viewModel: ProfileViewModel
+    @EnvironmentObject var authentication: AuthenticationViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -61,6 +62,16 @@ struct Profile: View {
             }
             
             Spacer()
+            
+            HStack {
+                Spacer()
+                Button {
+                    authentication.updateValidation(success: false)
+                } label: {
+                    Text("Log out")
+                }
+                Spacer()
+            }
         }
         .padding()
         .showLoader(isLoading: viewModel.isLoading)
