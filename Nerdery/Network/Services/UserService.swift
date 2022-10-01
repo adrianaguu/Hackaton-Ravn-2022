@@ -23,7 +23,7 @@ struct UserService: UserServiceType {
     
     func getUser(id: String) -> AnyPublisher<User, Error> {
         session.request(
-            urlString: ConfigService.baseURL + "user/\(id)",
+            urlString: ConfigService.baseURL + "users/\(id)",
             requestType: .get
         )
         .decode(type: User.self, decoder: decoder)

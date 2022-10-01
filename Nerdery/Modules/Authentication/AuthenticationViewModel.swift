@@ -10,7 +10,7 @@ import SwiftUI
 class AuthenticationViewModel: ObservableObject {
     @Published var isValidated = false
     
-    let userId: String = "userID"
+    let userId: String = "f18b2a05-bcc9-4732-9d7a-370356ac92b1"
     let programId: String = "programId"
     
     func updateValidation(success: Bool) {

@@ -26,7 +26,7 @@ class ModuleListViewModel: ObservableObject {
     
     func fetchModules() {
         isLoading = true
-        moduleService.getModules(userId: userId, programId: programId)
+        moduleService.getModules(userId: userId)
             .sink { [weak self] completion in
                 switch completion {
                 case .finished:
