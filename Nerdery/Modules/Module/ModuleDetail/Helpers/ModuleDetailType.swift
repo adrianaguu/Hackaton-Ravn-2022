@@ -16,7 +16,7 @@ enum ModuleDetailType: CaseIterable {
         case .weekList:
             return "Weeks"
         case .evaluation:
-            return "Evaluation"
+            return "Feedbacks"
         }
     }
 }

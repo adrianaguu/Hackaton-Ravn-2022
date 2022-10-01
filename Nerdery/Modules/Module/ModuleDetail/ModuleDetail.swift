@@ -19,11 +19,12 @@ struct ModuleDetails: View {
                 }
                 
             }.pickerStyle(.segmented)
+                .padding(.horizontal, 16)
             
             content
             Spacer()
         }
-        .navigationTitle("MODULE TITLE")
+        .navigationTitle(viewModel.moduleTitle)
         .navigationBarTitleDisplayMode(.inline)
     }
     
@@ -32,21 +33,43 @@ struct ModuleDetails: View {
         switch viewModel.displayedDetail {
         case .weekList:
             ScrollView {
-                LazyVStack {
+                LazyVStack(alignment: .leading, spacing: 16) {
+                    if !viewModel.weeks.isEmpty {
+                        Text("Select Week")
+                            .font(.body)
+                            .fontWeight(.semibold)
+                    }
                     ForEach(viewModel.weeks) { week in
                         NavigationLink(destination: WeekDetail(viewModel: WeekDetailViewModel(moduleId: viewModel.moduleId, weekId: week.id))) {
-                            Text("Week Detail")
+                            NerderyRow(title: week.name) {
+                                if week.isCompleted {
+                                    ChipLabel(title: "Done")
+                                        .foregroundColor(Color(.systemGreen))
+                                } else {
+                                    ChipLabel(title: "In Progress")
+                                        .foregroundColor(Color("LightOrange"))
+                                }
+                            }
                         }
                     }
                 }
-                .showLoader(isLoading: viewModel.isLoadingWeeks)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 24)
             }
-           
+            .showLoader(isLoading: viewModel.isLoadingWeeks)
+            
         case .evaluation:
             ScrollView {
-                LazyVStack {
-                    Text("Evaluation")
+                LazyVStack(alignment: .leading, spacing: 16) {
+                    ForEach(viewModel.feedbacks) { feedback in
+                        NerderyRow(title: feedback.content) {
+                            ChipLabel(title: feedback.type)
+                                .foregroundColor(Color(feedback.type == "Good" ? .systemGreen : .systemRed))
+                        }
+                    }
                 }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 24)
                 .showLoader(isLoading: viewModel.isLoadingFeedbacks)
             }
         }

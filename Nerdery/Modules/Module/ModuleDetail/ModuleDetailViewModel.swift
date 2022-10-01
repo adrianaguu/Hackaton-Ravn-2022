@@ -10,9 +10,9 @@ import Combine
 
 final class ModuleDetailViewModel: ObservableObject {
     @Published var displayedDetail: ModuleDetailType
-    @Published var weeks: [Week] = []
+    @Published var weeks: [Week] = [.example, .example1]
     @Published var isLoadingWeeks = false
-    @Published var feedbacks: [Feedback] = []
+    @Published var feedbacks: [Feedback] = [.example, .example1]
     @Published var isLoadingFeedbacks = false
     
     let moduleId: String
