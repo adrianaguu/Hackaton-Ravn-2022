@@ -10,12 +10,14 @@ import SwiftUI
 struct GradientBackgroudImage: View {
     let image: Image
     let imageWidth: CGFloat? = nil
-    let colors: [Color]
+    let gradient: Gradient
+    let startPoint: UnitPoint
+    let endPoint: UnitPoint
 
     var body: some View {
         Circle()
             .fill(
-                LinearGradient(gradient: .init(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(gradient: gradient, startPoint: startPoint, endPoint: endPoint)
             )
             .overlay {
                 image
@@ -29,6 +31,11 @@ struct GradientBackgroudImage: View {
 
 struct GradientBackgroudImage_Previews: PreviewProvider {
     static var previews: some View {
-        GradientBackgroudImage(image: .avatar1, colors: [.lightGreen, .lightBlue, .lightPurple, .lightPink])
+        GradientBackgroudImage(
+            image: .avatar1,
+            gradient: .lightGreenToLightPink,
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
     }
 }

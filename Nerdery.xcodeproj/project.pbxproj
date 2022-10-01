@@ -32,6 +32,7 @@
 		A4009D7B28E85D4700E5FFEE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4009D7A28E85D4700E5FFEE /* Colors.xcassets */; };
 		A4009D7D28E85D8300E5FFEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4009D7C28E85D8300E5FFEE /* Images.xcassets */; };
 		A4009D7F28E861D600E5FFEE /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D7E28E861D600E5FFEE /* Image+Extensions.swift */; };
+		A4009D8128E8686900E5FFEE /* Gradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D8028E8686900E5FFEE /* Gradient+Extensions.swift */; };
 		B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */; };
 		B17D79E928E82C5800C7915C /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DF28E82C5800C7915C /* Assignment.swift */; };
 		B17D79EA28E82C5800C7915C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E028E82C5800C7915C /* Comment.swift */; };
@@ -78,6 +79,7 @@
 		A4009D7A28E85D4700E5FFEE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A4009D7C28E85D8300E5FFEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4009D7E28E861D600E5FFEE /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
+		A4009D8028E8686900E5FFEE /* Gradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient+Extensions.swift"; sourceTree = "<group>"; };
 		B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		B17D79DF28E82C5800C7915C /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		B17D79E028E82C5800C7915C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				B17D79FC28E82DB900C7915C /* View+Extension.swift */,
 				A4009D7828E85CC800E5FFEE /* Color+Extensions.swift */,
 				A4009D7E28E861D600E5FFEE /* Image+Extensions.swift */,
+				A4009D8028E8686900E5FFEE /* Gradient+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */,
 				A4009D7728E85C6000E5FFEE /* GradientBackgroudImage.swift in Sources */,
 				B17D79FB28E82CE200C7915C /* FeedbackService.swift in Sources */,
+				A4009D8128E8686900E5FFEE /* Gradient+Extensions.swift in Sources */,
 				B17D79EB28E82C5800C7915C /* Challenge.swift in Sources */,
 				A4009D6528E814A900E5FFEE /* WeekDetailType.swift in Sources */,
 				B17D79ED28E82C5800C7915C /* Week.swift in Sources */,
