@@ -28,6 +28,16 @@
 		A4009D6828E8195700E5FFEE /* ThemeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D6728E8195700E5FFEE /* ThemeDetailViewModel.swift */; };
 		A4009D6A28E8199C00E5FFEE /* ThemeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D6928E8199C00E5FFEE /* ThemeDetail.swift */; };
 		B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */; };
+		B17D79E928E82C5800C7915C /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DF28E82C5800C7915C /* Assignment.swift */; };
+		B17D79EA28E82C5800C7915C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E028E82C5800C7915C /* Comment.swift */; };
+		B17D79EB28E82C5800C7915C /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E128E82C5800C7915C /* Challenge.swift */; };
+		B17D79EC28E82C5800C7915C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E228E82C5800C7915C /* User.swift */; };
+		B17D79ED28E82C5800C7915C /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E328E82C5800C7915C /* Week.swift */; };
+		B17D79EE28E82C5800C7915C /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E428E82C5800C7915C /* Evaluation.swift */; };
+		B17D79EF28E82C5800C7915C /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E528E82C5800C7915C /* Program.swift */; };
+		B17D79F028E82C5800C7915C /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E628E82C5800C7915C /* Module.swift */; };
+		B17D79F128E82C5800C7915C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E728E82C5800C7915C /* Theme.swift */; };
+		B17D79F228E82C5800C7915C /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E828E82C5800C7915C /* Feedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +63,16 @@
 		A4009D6728E8195700E5FFEE /* ThemeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDetailViewModel.swift; sourceTree = "<group>"; };
 		A4009D6928E8199C00E5FFEE /* ThemeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDetail.swift; sourceTree = "<group>"; };
 		B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		B17D79DF28E82C5800C7915C /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		B17D79E028E82C5800C7915C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B17D79E128E82C5800C7915C /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		B17D79E228E82C5800C7915C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B17D79E328E82C5800C7915C /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		B17D79E428E82C5800C7915C /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		B17D79E528E82C5800C7915C /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		B17D79E628E82C5800C7915C /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		B17D79E728E82C5800C7915C /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B17D79E828E82C5800C7915C /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +163,7 @@
 		A4009D4728E7F7BD00E5FFEE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B17D79DE28E82C5800C7915C /* Models */,
 				A4009D4928E7F89400E5FFEE /* MainTabView */,
 				A4009D4828E7F87500E5FFEE /* Login */,
 				A4009D3E28E7F57100E5FFEE /* Profile */,
@@ -238,6 +259,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B17D79DE28E82C5800C7915C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B17D79DF28E82C5800C7915C /* Assignment.swift */,
+				B17D79E028E82C5800C7915C /* Comment.swift */,
+				B17D79E128E82C5800C7915C /* Challenge.swift */,
+				B17D79E228E82C5800C7915C /* User.swift */,
+				B17D79E328E82C5800C7915C /* Week.swift */,
+				B17D79E428E82C5800C7915C /* Evaluation.swift */,
+				B17D79E528E82C5800C7915C /* Program.swift */,
+				B17D79E628E82C5800C7915C /* Module.swift */,
+				B17D79E728E82C5800C7915C /* Theme.swift */,
+				B17D79E828E82C5800C7915C /* Feedback.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,23 +348,33 @@
 			files = (
 				A4009D6828E8195700E5FFEE /* ThemeDetailViewModel.swift in Sources */,
 				A4009D4B28E7F8DB00E5FFEE /* LoginView.swift in Sources */,
+				B17D79F228E82C5800C7915C /* Feedback.swift in Sources */,
+				B17D79F028E82C5800C7915C /* Module.swift in Sources */,
 				A4009D6A28E8199C00E5FFEE /* ThemeDetail.swift in Sources */,
 				A4009D4528E7F66400E5FFEE /* SearchView.swift in Sources */,
+				B17D79EE28E82C5800C7915C /* Evaluation.swift in Sources */,
 				A4009D4F28E7FA0D00E5FFEE /* ModuleListViewModel.swift in Sources */,
 				A4009D5128E7FB2E00E5FFEE /* ProfileViewModel.swift in Sources */,
 				A4009D3228E7F25600E5FFEE /* MainTabView.swift in Sources */,
 				A4009D4328E7F64F00E5FFEE /* ModuleList.swift in Sources */,
+				B17D79E928E82C5800C7915C /* Assignment.swift in Sources */,
+				B17D79EF28E82C5800C7915C /* Program.swift in Sources */,
 				A4009D5A28E8009F00E5FFEE /* WeekDetailViewModel.swift in Sources */,
+				B17D79F128E82C5800C7915C /* Theme.swift in Sources */,
+				B17D79EA28E82C5800C7915C /* Comment.swift in Sources */,
 				A4009D5328E7FB3E00E5FFEE /* SearchViewModel.swift in Sources */,
 				A4009D6128E8121F00E5FFEE /* ModuleDetailType.swift in Sources */,
 				A4009D4128E7F60100E5FFEE /* Profile.swift in Sources */,
 				B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */,
+				B17D79EB28E82C5800C7915C /* Challenge.swift in Sources */,
 				A4009D6528E814A900E5FFEE /* WeekDetailType.swift in Sources */,
+				B17D79ED28E82C5800C7915C /* Week.swift in Sources */,
 				A4009D3028E7F25600E5FFEE /* NerderyApp.swift in Sources */,
 				A4009D4D28E7F96500E5FFEE /* LoginViewModel.swift in Sources */,
 				A4009D5C28E800D400E5FFEE /* WeekDetail.swift in Sources */,
 				A4009D5E28E8011900E5FFEE /* ModuleDetailViewModel.swift in Sources */,
 				A4009D5728E8000900E5FFEE /* ModuleDetail.swift in Sources */,
+				B17D79EC28E82C5800C7915C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
