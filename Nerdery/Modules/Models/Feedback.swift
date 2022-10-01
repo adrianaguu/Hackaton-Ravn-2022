@@ -7,25 +7,21 @@
 
 import Foundation
 
-struct Feedback: Codable, Identifiable {
+struct Feedback: Identifiable {
     let id: String
     let category: String
     let content: String
     let state: String
     let type: String
-    let userFrom: User
-    let userTo: User
-    let comments: [Comment]
-    
+}
+
+extension Feedback: Codable {
     enum CodingKeys: String, CodingKey {
         case uuid
         case category
         case content
         case state
         case type
-        case userFrom
-        case userTo
-        case comment
     }
     
     init(from decoder: Decoder) throws {
@@ -35,14 +31,15 @@ struct Feedback: Codable, Identifiable {
         self.content = try container.decode(String.self, forKey: .content)
         self.state = try container.decode(String.self, forKey: .state)
         self.type = try container.decode(String.self, forKey: .type)
-        self.userFrom = try container.decode(User.self, forKey: .userFrom)
-        self.userTo = try container.decode(User.self, forKey: .userTo)
-        self.comments = try container.decode([Comment].self, forKey: .comment)
-
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.id, forKey: .uuid)
     }
+}
+
+extension Feedback {
+    static let example = Feedback(id: "id1", category: "Category", content: "Feedback goes here", state: "Checked", type: "To Improve")
+    static let example1 = Feedback(id: "id2", category: "Category", content: "Feedback goes here", state: "UnChecked", type: "Good")
 }
