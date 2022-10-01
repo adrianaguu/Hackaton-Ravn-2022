@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GradientBackgroudImage: View {
     let image: Image
-    let imageWidth: CGFloat? = nil
+    var imageWidth: CGFloat? = nil
     let gradient: Gradient
     let startPoint: UnitPoint
     let endPoint: UnitPoint
