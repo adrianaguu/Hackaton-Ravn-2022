@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class ModuleListViewModel: ObservableObject {
-    @Published var modules: [Module] = []
+    @Published var modules: [Module] = [.example1, .example2]
     @Published var isLoading = false
     
     let userId: String
@@ -22,6 +22,8 @@ class ModuleListViewModel: ObservableObject {
         self.userId = userId
         self.programId = programId
         self.moduleService = moduleService
+        
+        fetchModules()
     }
     
     func fetchModules() {

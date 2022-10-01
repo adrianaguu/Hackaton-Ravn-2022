@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct Module: Codable, Identifiable {
+struct Module: Identifiable {
     let id: String
     let title: String
     let description: String
     let isCompleted: Bool
-    let weeks: [Week]
-    let evaluation: Evaluation
-    
+    let evaluationId: String
+}
+
+extension Module: Codable {
     enum CodingKeys: String, CodingKey {
         case uuid
         case title
         case description
         case isCompleted
-        case week
-        case evaluation
+        case evaluationId
     }
 
     init(from decoder: Decoder) throws {
@@ -29,8 +29,7 @@ struct Module: Codable, Identifiable {
         self.id = try container.decode(String.self, forKey: .uuid)
         self.title = try container.decode(String.self, forKey: .title)
         self.description = try container.decode(String.self, forKey: .description)
-        self.weeks = try container.decode([Week].self, forKey: .week)
-        self.evaluation = try container.decode(Evaluation.self, forKey: .evaluation)
+        self.evaluationId = try container.decode(String.self, forKey: .evaluationId)
         self.isCompleted = try container.decode(Bool.self, forKey: .isCompleted)
     }
 
@@ -38,4 +37,9 @@ struct Module: Codable, Identifiable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.id, forKey: .uuid)
     }
+}
+
+extension Module {
+    static let example1 = Module(id: "id1", title: "Module 1", description: "Module Topic Name", isCompleted: true, evaluationId: "evaluationId")
+    static let example2 = Module(id: "id2", title: "Module 2", description: "Module Topic Name", isCompleted: false, evaluationId: "evaluationId")
 }

@@ -16,13 +16,15 @@ final class ModuleDetailViewModel: ObservableObject {
     @Published var isLoadingFeedbacks = false
     
     let moduleId: String
+    let moduleTitle: String
     private let moduleService: ModuleServiceType
     private var cancellables = Set<AnyCancellable>()
     
-    init(moduleId: String, displayedDetail: ModuleDetailType = .weekList, moduleService: ModuleServiceType = ModuleService()) {
+    init(moduleTitle: String, moduleId: String, displayedDetail: ModuleDetailType = .weekList, moduleService: ModuleServiceType = ModuleService()) {
         self.displayedDetail = displayedDetail
         self.moduleId = moduleId
         self.moduleService = moduleService
+        self.moduleTitle = moduleTitle
         
         fetchWeeks()
         fetchFeedbacks()

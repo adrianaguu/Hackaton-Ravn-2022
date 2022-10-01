@@ -13,16 +13,32 @@ struct ModuleList: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVStack{
-                    ForEach(viewModel.modules) { module in
-                        NavigationLink(destination: ModuleDetails(viewModel: ModuleDetailViewModel(moduleId: module.id))) {
-                            Text(module.title)
+                VStack(alignment: .leading, spacing: 16) {
+                    if !viewModel.modules.isEmpty {
+                        Text("Select Module")
+                            .font(.body)
+                            .fontWeight(.semibold)
+                    }
+                    LazyVStack{
+                        ForEach(viewModel.modules) { module in
+                            NavigationLink(destination: ModuleDetails(viewModel: ModuleDetailViewModel(moduleTitle: module.title, moduleId: module.id))) {
+                                NerderyRow(title: module.title, description: module.description) {
+                                    if module.isCompleted {
+                                        ChipLabel(title: "Done")
+                                            .foregroundColor(Color(.systemGreen))
+                                    } else {
+                                        ChipLabel(title: "In Progress")
+                                            .foregroundColor(Color("LightOrange"))
+                                    }
+                                }
+                            }
                         }
                     }
-                   
                 }
-                .showLoader(isLoading: viewModel.isLoading)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 24)
             }
+            .showLoader(isLoading: viewModel.isLoading)
             .navigationTitle("Modules")
             .navigationBarTitleDisplayMode(.inline)
         }

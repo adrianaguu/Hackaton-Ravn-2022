@@ -55,6 +55,6 @@ struct ModuleDetails: View {
 
 struct ModuleDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleDetails(viewModel: .init(moduleId: "moduleId"))
+        ModuleDetails(viewModel: .init(moduleTitle: "Module 1", moduleId: "moduleId"))
     }
 }
