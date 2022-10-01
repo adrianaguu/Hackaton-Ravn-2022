@@ -97,4 +97,13 @@ struct ModuleService: ModuleServiceType {
         .eraseToAnyPublisher()
     }
 
+    func getEvaluation(evaluationId: String) -> AnyPublisher<Evaluation, Error> {
+        session.request(
+            urlString: ConfigService.baseURL + "manage/evaluation/\(evaluationId)",
+            requestType: .get
+        )
+        .decode(type: Evaluation.self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+    }
 }

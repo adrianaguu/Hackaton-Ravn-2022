@@ -13,6 +13,7 @@ struct Feedback: Identifiable {
     let content: String
     let state: String
     let type: String
+    let evaluationId: String
 }
 
 extension Feedback: Codable {
@@ -22,6 +23,7 @@ extension Feedback: Codable {
         case content
         case state
         case type
+        case evaluationId
     }
     
     init(from decoder: Decoder) throws {
@@ -31,6 +33,7 @@ extension Feedback: Codable {
         self.content = try container.decode(String.self, forKey: .content)
         self.state = try container.decode(String.self, forKey: .state)
         self.type = try container.decode(String.self, forKey: .type)
+        self.evaluationId = try container.decode(String.self, forKey: .evaluationId)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -40,6 +43,6 @@ extension Feedback: Codable {
 }
 
 extension Feedback {
-    static let example = Feedback(id: "id1", category: "Category", content: "Feedback goes here", state: "Checked", type: "To Improve")
-    static let example1 = Feedback(id: "id2", category: "Category", content: "Feedback goes here", state: "UnChecked", type: "Good")
+    static let example = Feedback(id: "id1", category: "Category", content: "Feedback goes here", state: "Checked", type: "To Improve", evaluationId: "evaluationId")
+    static let example1 = Feedback(id: "id2", category: "Category", content: "Feedback goes here", state: "UnChecked", type: "Good", evaluationId: "evaluationId")
 }

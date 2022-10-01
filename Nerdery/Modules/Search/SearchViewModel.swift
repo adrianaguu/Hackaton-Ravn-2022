@@ -15,7 +15,7 @@ final class SearchViewModel: ObservableObject {
 
     @Published var searchText = ""
     @Published var isLoading = false
-    @Published private(set) var feedbacks: [Feedback] = []
+    @Published private(set) var feedbacks: [Feedback] = [.example, .example1]
 
     var searchResults: [Feedback] {
         guard !searchText.isEmpty else { return feedbacks }

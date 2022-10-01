@@ -15,7 +15,6 @@ struct SearchView: View {
             VStack {
                 FeedbackList(items: viewModel.searchResults)
                     .showLoader(isLoading: viewModel.isLoading)
-
             }
             .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("Search title")
