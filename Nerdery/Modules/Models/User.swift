@@ -11,14 +11,16 @@ enum UserRole: String, Codable {
   case NERD, MENTOR
 }
 
-struct User: Codable, Identifiable {
+struct User: Identifiable {
     let id: String
     let role: UserRole
     let name: String
     let technology: String
     let programId: String
     let email: String
-    
+}
+
+extension User: Codable {
     enum CodingKeys: String, CodingKey {
         case uuid
         case role
@@ -44,4 +46,8 @@ struct User: Codable, Identifiable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.id, forKey: .uuid)
     }
+}
+
+extension User {
+    static let example = User(id: "1", role: .NERD, name: "Dane Jane", technology: "iOS Development", programId: "1", email: "")
 }

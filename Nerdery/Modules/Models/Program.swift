@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Program: Codable, Identifiable {
+struct Program: Identifiable {
     let id: String
     let title: String
     let description: String
@@ -19,7 +19,9 @@ struct Program: Codable, Identifiable {
         case description
         case module
     }
+}
 
+extension Program: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(String.self, forKey: .uuid)

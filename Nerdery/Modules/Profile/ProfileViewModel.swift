@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 final class ProfileViewModel: ObservableObject {
-    @Published var user: User?
+    @Published var user: User = .example
     @Published var isLoading = false
     
     let userService: UserServiceType
