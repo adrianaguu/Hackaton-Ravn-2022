@@ -14,9 +14,12 @@ struct ModuleList: View {
         NavigationView {
             ScrollView {
                 LazyVStack{
-                    NavigationLink(destination: ModuleDetails()) {
-                        Text("Module")
+                    ForEach(viewModel.modules) { module in
+                        NavigationLink(destination: ModuleDetails(viewModel: ModuleDetailViewModel(moduleId: module.id))) {
+                            Text(module.title)
+                        }
                     }
+                   
                 }
                 .showLoader(isLoading: viewModel.isLoading)
             }
