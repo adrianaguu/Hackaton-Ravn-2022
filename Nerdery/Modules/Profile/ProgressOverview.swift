@@ -16,23 +16,7 @@ struct ProgressOverview: View {
             Text("Your Progress Overview")
                 .fontWeight(.bold)
             
-            ProgressView(value: progress, total: 100)
-                .progressViewStyle(.linear)
-                .tint(.white)
-                .foregroundColor(Color.grayDark02)
-                .scaleEffect(x: 1, y: 2, anchor: .center)
-            
-            HStack {
-                Text("Done ") +
-                Text("\(progress, specifier: "%.0f")%")
-                    .fontWeight(.bold)
-                
-                Spacer()
-                
-                Text("Your Score is ") +
-                Text(score)
-                    .fontWeight(.bold)
-            }
+            ProgressLabel(tintColor: .white, progress: progress, score: score)
         }
         .padding()
         .background(
