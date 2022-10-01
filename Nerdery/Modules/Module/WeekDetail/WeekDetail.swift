@@ -60,9 +60,18 @@ struct WeekDetail: View {
                 .showLoader(isLoading: viewModel.isLoadingTopics)
             }
         case .challenge:
-            Text("Challenge")
+            ScrollView {
+                LazyVStack(alignment: .leading) {
+                    ForEach(viewModel.assignments) { assigment in
+                        NerderyRow(title: assigment.description, showAdditionalContent: false, additionalContent: { })
+                    }
+                }
+                .padding(.vertical, 24)
+                .padding(.horizontal, 16)
+                .showLoader(isLoading: viewModel.isLoadingTopics)
+            }
         case .evaluation:
-            Text("Evaluation")
+            FeedbackList(items: viewModel.feedbacks)
         }
     }
 }
