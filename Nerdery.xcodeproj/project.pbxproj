@@ -55,6 +55,7 @@
 		B17D79FD28E82DB900C7915C /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */; };
 		B17D7A0028E8324200C7915C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */; };
 		B17D7A0328E8882200C7915C /* NerderyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D7A0228E8882200C7915C /* NerderyRow.swift */; };
+		B17D7A0528E8A6F500C7915C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D7A0428E8A6F500C7915C /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		B17D79FC28E82DB900C7915C /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		B17D79FF28E8324200C7915C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B17D7A0228E8882200C7915C /* NerderyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerderyRow.swift; sourceTree = "<group>"; };
+		B17D7A0428E8A6F500C7915C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 		A4009D5428E7FBFA00E5FFEE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B17D7A0428E8A6F500C7915C /* RoundedCorner.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				A4009D4F28E7FA0D00E5FFEE /* ModuleListViewModel.swift in Sources */,
 				A4009D8C28E88C3800E5FFEE /* ProgressOverview.swift in Sources */,
 				A4009D5128E7FB2E00E5FFEE /* ProfileViewModel.swift in Sources */,
+				B17D7A0528E8A6F500C7915C /* RoundedCorner.swift in Sources */,
 				B17D79F828E82CE200C7915C /* ConfigService.swift in Sources */,
 				A4009D3228E7F25600E5FFEE /* MainTabView.swift in Sources */,
 				A4009D8528E86F4300E5FFEE /* AvatarView.swift in Sources */,
