@@ -11,10 +11,14 @@ struct Profile: View {
     @StateObject var viewModel: ProfileViewModel
     
     var body: some View {
-        VStack {
-            Text("Profile")
+        NavigationView {
+            VStack {
+                Text("Profile")
+            }
+            .showLoader(isLoading: viewModel.isLoading)
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .showLoader(isLoading: viewModel.isLoading)
     }
 }
 
