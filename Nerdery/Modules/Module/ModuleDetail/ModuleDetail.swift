@@ -21,16 +21,22 @@ struct ModuleDetails: View {
             }.pickerStyle(.segmented)
             
             content
+            Spacer()
         }
+        .navigationTitle("MODULE TITLE")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @ViewBuilder
     var content: some View {
         switch viewModel.displayedDetail {
         case .weekList:
-            NavigationLink(destination: WeekDetail()) {
-                Text("Week Detail")
+            ScrollView {
+                NavigationLink(destination: WeekDetail()) {
+                    Text("Week Detail")
+                }
             }
+           
         case .evaluation:
             Text("Evaluation")
         }

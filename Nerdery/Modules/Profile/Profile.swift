@@ -14,6 +14,7 @@ struct Profile: View {
         NavigationView {
             VStack {
                 Text("Profile")
+                Spacer()
             }
             .showLoader(isLoading: viewModel.isLoading)
             .navigationTitle("Profile")

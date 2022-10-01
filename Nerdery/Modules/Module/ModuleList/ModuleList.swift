@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ModuleList: View {
     var body: some View {
-        VStack {
-            Text("Module List")
-            
-            NavigationLink(destination: ModuleDetails()) {
-                Text("Detail")
+        NavigationView {
+            ScrollView {
+                LazyVStack{
+                    NavigationLink(destination: ModuleDetails()) {
+                        Text("Module")
+                    }
+                }
             }
+            .navigationTitle("Modules")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

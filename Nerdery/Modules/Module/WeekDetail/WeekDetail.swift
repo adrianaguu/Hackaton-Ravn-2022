@@ -21,15 +21,22 @@ struct WeekDetail: View {
             }.pickerStyle(.segmented)
             
             content
+            Spacer()
         }
+        .navigationTitle("Week title")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @ViewBuilder
     var content: some View {
         switch viewModel.displayedDetail {
         case .themeList:
-            NavigationLink(destination: ThemeDetail()) {
-                Text("Theme Detail")
+            ScrollView {
+                LazyVStack {
+                    NavigationLink(destination: ThemeDetail()) {
+                        Text("Theme Detail")
+                    }
+                }
             }
         case .challenge:
             Text("Challenge")
