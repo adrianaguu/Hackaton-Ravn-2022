@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ChipLabel: View {
     let title: String
-    let style: ChipLabelStyle
+    var style: ChipLabelStyle = .outline
     
     var body: some View {
         Text(title)
+            .font(.caption)
+            .fontWeight(.medium)
             .padding(.horizontal, 8)
             .padding(.vertical, 3)
             .background(
@@ -37,12 +39,14 @@ struct NerderyRow<Content: View>: View {
     let description: String?
     let state: NerderyRowState
     var additionalContent: Content
+    let isNavigation: Bool
     
-    init(title: String, description: String?, state: NerderyRowState = .idle, @ViewBuilder additionalContent: () -> Content ) {
+    init(title: String, description: String?, state: NerderyRowState = .idle, isNavigation: Bool = true, @ViewBuilder additionalContent: () -> Content ) {
         self.title = title
         self.description = description
         self.additionalContent = additionalContent()
         self.state = state
+        self.isNavigation = isNavigation
     }
     
     
@@ -50,15 +54,21 @@ struct NerderyRow<Content: View>: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(title)
+                    .fontWeight(.bold)
                 if let description = description {
                     Text(description)
                 }
                 additionalContent
             }
+            .font(.subheadline)
             Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(state == .idle ? Color("Ellipse4") : Color(.systemGray3))
+            if isNavigation {
+                Image(systemName: "chevron.right")
+                    .font(.title3)
+                    .foregroundColor(state == .idle ? Color("Ellipse4") : Color(uiColor: .darkText))
+            }
         }
+        .foregroundColor(Color(uiColor: .darkText))
         .padding(.vertical, 8)
         .padding(.horizontal, 16)
         .background(
