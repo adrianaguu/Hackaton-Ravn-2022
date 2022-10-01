@@ -26,17 +26,41 @@ struct Profile: View {
                 Image("MockUser")
             }
             
-            ProgressOverview(progress: 50, score: "10")
+            ProgressOverview(progress: 15, score: "10")
             
             Text("Current Week")
                 .fontWeight(.medium)
                 .padding(.top, 24)
             
-            NerderyRow(title: "Week 2", description: "Week topic name") {
-                VStack {
-                    ProgressLabel(tintColor: .grayDark02, progress: 40, score: "10")
+            NerderyRow(title: viewModel.currentWeek.name, isNavigation: false) {
+                HStack {
+                    ChipLabel(title: "Modulo I")
+                    
+                    ChipLabel(title: "In Progress")
+                        .foregroundColor(Color(uiColor: .systemOrange))
                 }
             }
+            
+            Text("Lastest Feedback")
+                .fontWeight(.medium)
+                .padding(.top, 24)
+            
+            NerderyRow(title: viewModel.lastWeek.name) {
+                VStack {
+                    ProgressLabel(tintColor: .grayDark02, progress: 100, score: "10")
+                    
+                    HStack {
+                        ChipLabel(title: "Modulo I")
+                        
+                        ChipLabel(title: "In Progress")
+                            .foregroundColor(Color(uiColor: .systemGreen))
+                        
+                        Spacer()
+                    }
+                }
+            }
+            
+            Spacer()
         }
         .padding()
         .showLoader(isLoading: viewModel.isLoading)

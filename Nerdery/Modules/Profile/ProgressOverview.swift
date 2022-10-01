@@ -16,7 +16,7 @@ struct ProgressOverview: View {
             Text("Your Progress Overview")
                 .fontWeight(.bold)
             
-            ProgressLabel(tintColor: .white, progress: progress, score: score)
+            ProgressLabel(tintColor: .accentColor, progress: progress, score: score)
         }
         .padding()
         .background(

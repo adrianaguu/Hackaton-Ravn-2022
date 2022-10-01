@@ -11,6 +11,8 @@ import Combine
 
 final class ProfileViewModel: ObservableObject {
     @Published var user: User = .example
+    @Published var currentWeek: Week = .example1
+    @Published var lastWeek: Week = .example
     @Published var isLoading = false
     
     let userService: UserServiceType
