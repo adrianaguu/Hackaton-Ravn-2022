@@ -27,6 +27,7 @@ struct UserService: UserServiceType {
             requestType: .get
         )
         .decode(type: User.self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
 }

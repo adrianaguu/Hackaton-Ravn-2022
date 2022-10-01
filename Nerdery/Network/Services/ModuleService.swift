@@ -33,6 +33,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: User.self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
@@ -42,6 +43,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: [Feedback].self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
@@ -51,6 +53,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: [Week].self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
@@ -60,6 +63,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: [Feedback].self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
@@ -69,6 +73,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: [Theme].self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
@@ -78,6 +83,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: Challenge.self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
@@ -87,6 +93,7 @@ struct ModuleService: ModuleServiceType {
             requestType: .get
         )
         .decode(type: [Feedback].self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
 

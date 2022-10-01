@@ -31,6 +31,7 @@ struct FeedbackService: FeedbackServiceType {
             requestType: .get
         )
         .decode(type: [Feedback].self, decoder: decoder)
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
     
