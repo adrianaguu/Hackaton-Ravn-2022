@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WeekDetail: View {
-    @StateObject var viewModel = WeekDetailViewModel()
+    @StateObject var viewModel: WeekDetailViewModel
 
     var body: some View {
         VStack {
@@ -37,6 +37,7 @@ struct WeekDetail: View {
                         Text("Theme Detail")
                     }
                 }
+                .showLoader(isLoading: viewModel.isLoadingTopics)
             }
         case .challenge:
             Text("Challenge")
@@ -48,6 +49,6 @@ struct WeekDetail: View {
 
 struct WeekDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WeekDetail()
+        WeekDetail(viewModel: WeekDetailViewModel(moduleId: "moduleId", weekId: "weekId"))
     }
 }

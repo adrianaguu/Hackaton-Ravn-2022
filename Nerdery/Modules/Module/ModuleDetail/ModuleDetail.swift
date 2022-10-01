@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ModuleDetails: View {
-    @StateObject var viewModel = ModuleDetailViewModel()
+    @StateObject var viewModel: ModuleDetailViewModel
 
     var body: some View {
         VStack {
@@ -32,19 +32,29 @@ struct ModuleDetails: View {
         switch viewModel.displayedDetail {
         case .weekList:
             ScrollView {
-                NavigationLink(destination: WeekDetail()) {
-                    Text("Week Detail")
+                LazyVStack {
+                    ForEach(viewModel.weeks) { week in
+                        NavigationLink(destination: WeekDetail(viewModel: WeekDetailViewModel(moduleId: viewModel.moduleId, weekId: week.id))) {
+                            Text("Week Detail")
+                        }
+                    }
                 }
+                .showLoader(isLoading: viewModel.isLoadingWeeks)
             }
            
         case .evaluation:
-            Text("Evaluation")
+            ScrollView {
+                LazyVStack {
+                    Text("Evaluation")
+                }
+                .showLoader(isLoading: viewModel.isLoadingFeedbacks)
+            }
         }
     }
 }
 
 struct ModuleDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleDetails(viewModel: .init())
+        ModuleDetails(viewModel: .init(moduleId: "moduleId"))
     }
 }
