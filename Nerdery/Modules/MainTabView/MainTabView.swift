@@ -17,7 +17,7 @@ struct MainTabView: View {
                     Label("Profile", systemImage: "person.crop.circle.fill")
                 }
 
-            ModuleList()
+            ModuleList(viewModel: ModuleListViewModel(userId: authentication.userId, programId: authentication.programId))
                 .tabItem {
                     Label("Modules", systemImage: "tray.and.arrow.down.fill")
                 }

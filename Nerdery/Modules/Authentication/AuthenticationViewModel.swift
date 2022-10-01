@@ -11,6 +11,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var isValidated = false
     
     let userId: String = "userID"
+    let programId: String = "programId"
     
     func updateValidation(success: Bool) {
         withAnimation {
