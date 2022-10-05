@@ -46,7 +46,7 @@ struct Profile: View {
                 .fontWeight(.medium)
                 .padding(.top, 24)
             
-            NerderyRow(title: viewModel.lastWeek.name) {
+            NerderyRow(title: viewModel.lastWeek.name, isNavigation: false) {
                 VStack {
                     ProgressLabel(tintColor: .grayDark02, progress: 100, score: "10")
                     

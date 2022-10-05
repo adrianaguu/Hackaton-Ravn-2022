@@ -69,7 +69,7 @@ struct WeekDetail: View {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     ForEach(viewModel.assignments) { assigment in
-                        NerderyRow(title: assigment.description, showAdditionalContent: false, additionalContent: { })
+                        NerderyRow(title: assigment.description, showAdditionalContent: false, isNavigation: false, additionalContent: { })
                     }
                 }
                 .padding(.vertical, 24)

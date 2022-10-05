@@ -39,6 +39,7 @@
 		A4009D8E28E8980800E5FFEE /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D8D28E8980800E5FFEE /* ProgressLabel.swift */; };
 		A4009D9328E8A30A00E5FFEE /* FeedbackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D9228E8A30A00E5FFEE /* FeedbackList.swift */; };
 		A4009D9528E8B63D00E5FFEE /* EvaluationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4009D9428E8B63D00E5FFEE /* EvaluationDetail.swift */; };
+		A44470F828ED23180017874E /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = A44470F728ED23180017874E /* AppCenterDistribute */; };
 		B17D79DC28E82BA800C7915C /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */; };
 		B17D79E928E82C5800C7915C /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79DF28E82C5800C7915C /* Assignment.swift */; };
 		B17D79EA28E82C5800C7915C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D79E028E82C5800C7915C /* Comment.swift */; };
@@ -94,6 +95,7 @@
 		A4009D8D28E8980800E5FFEE /* ProgressLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		A4009D9228E8A30A00E5FFEE /* FeedbackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackList.swift; sourceTree = "<group>"; };
 		A4009D9428E8B63D00E5FFEE /* EvaluationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationDetail.swift; sourceTree = "<group>"; };
+		A44470F928ED26500017874E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B17D79DB28E82BA800C7915C /* URLSession+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		B17D79DF28E82C5800C7915C /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		B17D79E028E82C5800C7915C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44470F828ED23180017874E /* AppCenterDistribute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +148,7 @@
 		A4009D2E28E7F25600E5FFEE /* Nerdery */ = {
 			isa = PBXGroup;
 			children = (
+				A44470F928ED26500017874E /* Info.plist */,
 				B17D7A0128E8879D00C7915C /* Components */,
 				A4009D8628E86FC500E5FFEE /* ViewModifiers */,
 				A4009D6B28E859D800E5FFEE /* Resources */,
@@ -408,6 +412,9 @@
 			dependencies = (
 			);
 			name = Nerdery;
+			packageProductDependencies = (
+				A44470F728ED23180017874E /* AppCenterDistribute */,
+			);
 			productName = Nerdery;
 			productReference = A4009D2C28E7F25600E5FFEE /* Nerdery.app */;
 			productType = "com.apple.product-type.application";
@@ -436,6 +443,9 @@
 				Base,
 			);
 			mainGroup = A4009D2328E7F25600E5FFEE;
+			packageReferences = (
+				A44470F628ED23180017874E /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
+			);
 			productRefGroup = A4009D2D28E7F25600E5FFEE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -642,6 +652,7 @@
 				DEVELOPMENT_TEAM = 8SCV9QJZC8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nerdery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -672,6 +683,7 @@
 				DEVELOPMENT_TEAM = 8SCV9QJZC8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nerdery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -713,6 +725,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A44470F628ED23180017874E /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A44470F728ED23180017874E /* AppCenterDistribute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A44470F628ED23180017874E /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterDistribute;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4009D2428E7F25600E5FFEE /* Project object */;
 }
